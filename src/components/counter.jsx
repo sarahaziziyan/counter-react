@@ -5,6 +5,12 @@ class Counter extends Component {
         count: 0,
         tags: []
     }
+
+    constructor() {
+        super();
+        this.handleIncrement = this.handleIncrement.bind(this);
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -16,7 +22,7 @@ class Counter extends Component {
     }
 
     handleIncrement() {
-        console.log("Increment Clicked!");
+        console.log("Increment Clicked!", this);
     }
 
     renderTags() {
