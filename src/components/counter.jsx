@@ -6,10 +6,10 @@ class Counter extends Component {
         tags: []
     }
 
-    constructor() {
-        super();
-        this.handleIncrement = this.handleIncrement.bind(this);
-    }
+    // constructor() {
+    //     super();
+    //     this.handleIncrement = this.handleIncrement.bind(this);
+    // }
 
     render() {
         return (
@@ -21,7 +21,7 @@ class Counter extends Component {
         );
     }
 
-    handleIncrement() {
+    handleIncrement = () => {
         console.log("Increment Clicked!", this);
     }
 
