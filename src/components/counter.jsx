@@ -26,7 +26,7 @@ class Counter extends Component {
                     className='btn btn-secondary btn-danger btn-sm'>
                     Delete
                 </button>
-                {this.renderTags()}
+                {/* {this.renderTags()} */}
             </React.Fragment>
         );
     }
