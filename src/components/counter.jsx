@@ -16,7 +16,16 @@ class Counter extends Component {
             <React.Fragment>
                 {this.props.children}
                 <span className={this.getCounterClasses()}>{this.formatCount()}</span>
-                <button onClick={() => this.handleIncrement({ id: 1 })} className='btn btn-secondary btn-sm'>Increment</button>
+                <button
+                    onClick={this.handleIncrement}
+                    className='btn btn-secondary btn-sm'>
+                    Increment
+                </button>
+                <button
+                    onClick={() => this.props.onDelete(this.props.id)}
+                    className='btn btn-secondary btn-danger btn-sm'>
+                    Delete
+                </button>
                 {this.renderTags()}
             </React.Fragment>
         );
@@ -39,7 +48,7 @@ class Counter extends Component {
     }
 
     formatCount() {
-        const { value: value } = this.state;
+        const { value } = this.state;
         return value === 0 ? 'Zero' : value;
     }
 }
