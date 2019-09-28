@@ -14,6 +14,7 @@ class Counter extends Component {
     render() {
         return (
             <React.Fragment>
+                {this.props.children}
                 <span className={this.getCounterClasses()}>{this.formatCount()}</span>
                 <button onClick={() => this.handleIncrement({ id: 1 })} className='btn btn-secondary btn-sm'>Increment</button>
                 {this.renderTags()}
